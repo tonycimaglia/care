@@ -8,13 +8,31 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var users = require('./routes/usersController');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+//Mongo connection set-up
+// mongoose.Promise = global.Promise
+// mongoose.connect(process.env.MONGODB_URI', {
+//   useMongoClient: true
+// })
+
+// mongoose.connection.once('open', () => {
+//   console.log('Mongoose has connected to MongoDB!')
+// })
+
+// mongoose.connection.on('error', (error) => {
+//   console.error(`
+//     MongoDB connection error!!! 
+//     ${error}
+//   `)
+//   process.exit(-1)
+// })
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -25,9 +43,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/users', usersController);
 
-// heroku checklist lines
+// heroku checklist lines might have to move var mongoose
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI)
 
