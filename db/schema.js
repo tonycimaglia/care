@@ -14,6 +14,8 @@ const PatientSchema = new Schema(
             required: false,
             unique: false
         },
+        //tasks: [TaskSchema]
+    },
     {
         timestamps: {}
     }
@@ -36,7 +38,7 @@ const UserSchema = new Schema(
             required: true,
             unique: false
         },
-        // patients: [PatientSchema] add back if UserSchema works
+        patients: [PatientSchema]
     },
     {
         timestamps: {}
