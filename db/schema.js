@@ -1,20 +1,23 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-/* add if user schema works
+
 const PatientSchema = new Schema(
     {
         roomNumber: {
             type: Number,
             required: true,
             unique: false
-        }
-    },
+        },
+        miscInfo: {
+            type: String,
+            required: false,
+            unique: false
+        },
     {
         timestamps: {}
     }
 )
-*/
 
 const UserSchema = new Schema(
     {

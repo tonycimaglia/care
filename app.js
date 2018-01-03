@@ -1,5 +1,5 @@
 require('dotenv').config()
-
+var mongoose = require('mongoose');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -17,22 +17,22 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 //Mongo connection set-up
-// mongoose.Promise = global.Promise
-// mongoose.connect(process.env.MONGODB_URI', {
-//   useMongoClient: true
-// })
+mongoose.Promise = global.Promise
+mongoose.connect(process.env.MONGODB_URI, {
+  useMongoClient: true
+})
 
-// mongoose.connection.once('open', () => {
-//   console.log('Mongoose has connected to MongoDB!')
-// })
+mongoose.connection.once('open', () => {
+  console.log('Mongoose has connected to MongoDB!')
+})
 
-// mongoose.connection.on('error', (error) => {
-//   console.error(`
-//     MongoDB connection error!!! 
-//     ${error}
-//   `)
-//   process.exit(-1)
-// })
+mongoose.connection.on('error', (error) => {
+  console.error(`
+    MongoDB connection error!!! 
+    ${error}
+  `)
+  process.exit(-1)
+})
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -42,12 +42,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use('/', index);
+const userController = require('./routes/usersController')
 app.use('/users', usersController);
 
 // heroku checklist lines might have to move var mongoose
-var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -66,5 +66,12 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+// Automatically redirect to the Users page on load
+app.get('/', (request, response) => {
+  response.redirect('/users')
+})
+
+// starting server
 
 module.exports = app;
