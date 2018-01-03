@@ -68,9 +68,6 @@ app.use(function(err, req, res, next) {
 });
 
 // Automatically redirect to the Users page on load
-app.get('/', (request, response) => {
-  response.redirect('/users')
-})
 
 // starting server
 
