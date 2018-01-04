@@ -11,7 +11,7 @@
     <div class="patients">
         {{#each user.patients}}
         <div class="patient bed">
-            <a href="/users/{{../userId}}/patients/{{this._id}}">
+            <a href="/users/{{../user._id}}/patients/{{this._id}}">
                 <h5>Room #{{this.roomNumber}}</h5>
             </a>
         </div>
