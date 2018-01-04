@@ -17,6 +17,21 @@ router.get('/', function (request, response) {
     })
 });
 
+router.get('/:userId/edit', (request, response) => {
+  const userId = request.params.userId
+
+  User.findById(userId)
+    .then((user) => {
+      response.render('users/edit', {
+        user,
+        pageTitle: 'Update Nurse'
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+
 // create a nurse
 
 router.get('/new', (request, response) => {
@@ -65,5 +80,14 @@ router.get('/:userId/delete', (request, response) => {
     })
 })
 
+router.put('/:userId', (request, response) => {
+  const userId = request.params.userId
+  const updatedUserInfo = request.body
+
+  User.findByIdAndUpdate(userId, updatedUserInfo, {new: true})
+    .then(() => {
+      response.redirect(`/users/${userId}`)
+    })
+})
 
 module.exports = router;
