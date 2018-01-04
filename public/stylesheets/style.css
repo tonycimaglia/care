@@ -1,8 +1,54 @@
 body {
-  padding: 50px;
+  padding: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: rgb(98, 139, 181);
+  color: #E3E1D6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 a {
-  color: #00B7FF;
+  color: #E3E1D6;
 }
+
+.nurseContainer {
+  border: 2px solid #E3E1D6;
+}
+
+/*Bed design*/
+.bedscontainer {
+  display: flex;
+  align-items: space-around;
+  justify-content: 
+}
+
+.patientBed {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E3E1D6;
+  width: 250px;
+  height: 400px;
+}
+
+.bedTop {
+  display: flex;
+  justify-content: space around;
+  border: 1px solid #E3E1D6;
+}
+
+.pillow {
+  border: 1px solid #E3E1D6;
+}
+
+.sheet {
+  border: 1px solid #E3E1D6;
+}
+
+.roomNumber {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #E3E1D6;
+}
+
