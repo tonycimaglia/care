@@ -1,3 +1,14 @@
 <div>
-I'm the patients show page
+    <h1>{{patient.roomNumber}}</h1>
+    <h3>{{patient.miscInfo}}</h3>
 </div>
+
+  <div class="tasks">
+    {{#each patient.tasks}}
+      <div class="task">
+        <a href="/users/{{../userId}}/patients/{{../patient._id}}/tasks/{{this._id}}">
+          {{this.description}}
+        </a>
+      </div>
+    {{/each}}
+  </div>

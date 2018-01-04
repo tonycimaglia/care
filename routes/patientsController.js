@@ -1,13 +1,11 @@
 var express = require('express');
-var router = express.Router();
+var router = express.Router({mergeParams: true});
 const User = require('../db/models/User')
 
 
 router.get('/:patientId', (request, response) => {
     const userId = request.params.userId
     const patientId = request.params.patientId
-    console.log("this is the userId:" +userId)
-    console.log(user)
     User.findById(userId)
         .then((user) => {
             const patient = user.patients.id(patientId)
