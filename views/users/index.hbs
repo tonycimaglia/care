@@ -1,12 +1,13 @@
 <div>
     <div>
-
         {{#each users}}
+        <a href="/users/{{this._id}}" class="link user-card">
         <div>
             <h3>
                 {{this.name}}
             </h3>
         </div>
+        </a>
         {{/each}}
     </div>
 

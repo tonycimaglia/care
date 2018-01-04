@@ -35,6 +35,8 @@ router.post('/', (request, response) => {
     })
 })
 
+// show specific user
+
 router.get('/:userId', (request, response) => {
   const userId = request.params.userId
   User.findById(userId)
