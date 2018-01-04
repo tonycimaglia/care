@@ -45,12 +45,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// registering controllers
 
 app.use('/', index);
 const userController = require('./routes/usersController')
 app.use('/users', usersController);
 
-// heroku checklist lines might have to move var mongoose
+//patientsController
+//tasksController
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -71,7 +73,5 @@ app.use(function(err, req, res, next) {
 });
 
 // Automatically redirect to the Users page on load
-
-// starting server
 
 module.exports = app;

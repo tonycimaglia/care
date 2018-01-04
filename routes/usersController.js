@@ -9,12 +9,16 @@ router.get('/', function(req, res, next) {
     .then((users) => {
       res.render('users/index', {
         users,
-        pageTitle: 'Users'
+        pageTitle: 'Nurses'
       })
     })
     .catch((error) => {
       console.log(error)
     })
 });
+
+router.get('/new', (request, response) => {
+  response.render('users/new', { pageTitle: 'New Nurse' })
+})
 
 module.exports = router;
