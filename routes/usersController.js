@@ -17,6 +17,8 @@ router.get('/', function (request, response) {
     })
 });
 
+// edit nurse
+
 router.get('/:userId/edit', (request, response) => {
   const userId = request.params.userId
 
@@ -79,6 +81,8 @@ router.get('/:userId/delete', (request, response) => {
       console.log(error)
     })
 })
+
+// take edit page and update existing info
 
 router.put('/:userId', (request, response) => {
   const userId = request.params.userId
