@@ -24,7 +24,7 @@ mongoose.connection.on('error', (error) => {
 User.remove({})
     .then(() => {
         const nurseRatched = new User({
-            name: 'SeedsNurse',
+            name: 'Nurse Ratched',
             phoneNumber: 4048675309,
             floor: '5b',
             patients: []
