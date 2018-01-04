@@ -3,11 +3,11 @@ var router = express.Router();
 const User = require('../db/models/User')
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', function (request, response) {
 
   User.find({})
     .then((users) => {
-      res.render('users/index', {
+      response.render('users/index', {
         users,
         pageTitle: 'Nurses'
       })
@@ -19,6 +19,18 @@ router.get('/', function(req, res, next) {
 
 router.get('/new', (request, response) => {
   response.render('users/new', { pageTitle: 'New Nurse' })
+})
+
+router.post('/', (request, response) => {
+  const newUser = request.body
+
+  User.create(newUser)
+    .then(() => {
+      response.redirect('/users')
+    })
+    .catch((error) => {
+      console.log(error)
+    })
 })
 
 module.exports = router;

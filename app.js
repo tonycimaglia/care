@@ -48,7 +48,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 // registering controllers
 
 app.use('/', index);
-const usersController = require('./routes/usersController')
 app.use('/users', usersController);
 
 //patientsController
