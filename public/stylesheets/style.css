@@ -19,36 +19,45 @@ a {
 
 /*Bed design*/
 .bedscontainer {
+  width: 100%;
   display: flex;
-  align-items: space-around;
-  justify-content: 
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .patientBed {
   display: flex;
   flex-direction: column;
-  border: 1px solid #E3E1D6;
   width: 250px;
   height: 400px;
+  border-radius: 25px;
+  border: 1px solid #E3E1D6;
 }
 
 .bedTop {
   display: flex;
-  justify-content: space around;
-  border: 1px solid #E3E1D6;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  border-radius: 25px;
 }
 
 .pillow {
   border: 1px solid #E3E1D6;
+  width: 85px;
+  height: 50px;
+  background-color: #E3E1D6;
 }
 
 .sheet {
-  border: 1px solid #E3E1D6;
+  height: 20px;
+  background-color: #E3E1D6;
 }
 
 .roomNumber {
   display: flex;
   justify-content: space-around;
-  border: 1px solid #E3E1D6;
+  height: 300px;
 }
 

@@ -15,21 +15,21 @@
         <a href="/users/{{user._id}}/delete">Delete This Nurse</a>
     </div>
     <H3>Patients:</H3>
-    <div class="bedscontainer">
-        {{#each user.patients}}
-        <div class="patientBed">
-            <div class="bedTop">
-            </div>
+</div>
+<div class="bedscontainer">
+    {{#each user.patients}}
+    <div class="patientBed">
+        <div class="bedTop">
             <div class="pillow">
             </div>
-            <div class="sheet">
-            </div>
-            <div class="roomNumber">
-                <a href="/users/{{../user._id}}/patients/{{this._id}}">
-                    <h5>Room #{{this.roomNumber}}</h5>
-                </a>
-            </div>
         </div>
-        {{/each}}
+        <div class="sheet">
+        </div>
+        <div class="roomNumber">
+            <a href="/users/{{../user._id}}/patients/{{this._id}}">
+                <h6>{{this.roomNumber}}</h6>
+            </a>
+        </div>
     </div>
+    {{/each}}
 </div>
