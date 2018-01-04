@@ -1,6 +1,18 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+const TaskSchema = new Schema(
+    {
+        description: {
+            type: String,
+            required: false,
+            unique: false
+        },
+    },
+    {
+        timestamps: {}
+    }
+)
 
 const PatientSchema = new Schema(
     {
@@ -14,7 +26,7 @@ const PatientSchema = new Schema(
             required: false,
             unique: false
         },
-        //tasks: [TaskSchema]
+        tasks: [TaskSchema]
     },
     {
         timestamps: {}
@@ -47,4 +59,6 @@ const UserSchema = new Schema(
 
 module.exports = {
     UserSchema,
+    PatientSchema,
+    TaskSchema
 }

@@ -1,6 +1,8 @@
 require('dotenv').config()
 
 const User = require('./models/User')
+const Patient = require('./models/Patient')
+const Task = require('./models/Task')
 const mongoose = require('mongoose')
 
 // connect to database
@@ -25,23 +27,35 @@ User.remove({})
             name: 'SeedsNurse',
             phoneNumber: 4048675309,
             floor: '5b',
-            patients: [] //i might need to create a patient first
+            patients: []
         })
 
         const seedPatient1 = new Patient({
             roomNumber: 67,
-            miscInfo: 'He likes to spit'
+            miscInfo: 'He likes to spit',
+            tasks: []
         })
+
+        const seedTask1 = new Task({
+            description: 'Clamp chest tube'
+        })
+        seedPatient1.tasks.push(seedTask1)
 
         const seedPatient2 = new Patient({
             roomNumber: 74,
-            miscInfo: 'Pain Seeking'
+            miscInfo: 'Pain Seeking',
+            tasks: []
         })
+
+        const seedTask2 = new Task({
+            description: 'Discontinue heparin drip'
+        })
+        seedPatient2.tasks.push(seedTask2)
 
         nurseRatched.patients.push(seedPatient1, seedPatient2)
 
         return nurseRatched.save()
-        
+
     }).catch((error) => {
         console.log('!!!!! ERROR SAVING SEEDED DATA !!!!!')
         console.log(error)
