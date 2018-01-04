@@ -51,6 +51,8 @@ app.use('/', index);
 app.use('/users', usersController);
 
 //patientsController
+const patientsController = require('./routes/patientsController')
+app.use('/users/:userId/patients', patientsController)
 //tasksController
 
 // catch 404 and forward to error handler
