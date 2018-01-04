@@ -21,12 +21,27 @@ mongoose.connection.on('error', (error) => {
 // Delete all users, then add some fake ones
 User.remove({})
     .then(() => {
-        return User.create({
+        const nurseRatched = new User({
             name: 'SeedsNurse',
             phoneNumber: 4048675309,
             floor: '5b',
             patients: [] //i might need to create a patient first
         })
+
+        const seedPatient1 = new Patient({
+            roomNumber: 67,
+            miscInfo: 'He likes to spit'
+        })
+
+        const seedPatient2 = new Patient({
+            roomNumber: 74,
+            miscInfo: 'Pain Seeking'
+        })
+
+        nurseRatched.patients.push(seedPatient1, seedPatient2)
+
+        return nurseRatched.save()
+        
     }).catch((error) => {
         console.log('!!!!! ERROR SAVING SEEDED DATA !!!!!')
         console.log(error)
