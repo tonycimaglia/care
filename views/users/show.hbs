@@ -1,3 +1,20 @@
+<h1>
+    {{user.name}} {{user.phoneNumber}} {{user.floor}}</h1>
 <div>
-    I'm the show page y'all
+    <div class="button primary">
+        <a href="/users/{{user._id}}/edit">Update Nurse Info</a>
+    </div>
+    <div class="button warning">
+        <a href="/users/{{user._id}}/delete">Delete This Nurse</a>
+    </div>
+    <H3>Patients:</H3>
+    <div class="patients">
+        {{#each user.patients}}
+        <div class="patient bed">
+            <a href="/users/{{../userId}}/patients/{{this._id}}">
+                <h5>Room #{{this.roomNumber}}</h5>
+            </a>
+        </div>
+         {{/each}}
+    </div>
 </div>
