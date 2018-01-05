@@ -6,12 +6,15 @@ const User = require('../db/models/User')
 // new patient route
 
 router.get('/new', (request, response) => {
+    const userId = request.params.userId
+    console.log("I am the" + userId)
     response.render('patients/new', {
-      pageTitle: 'New Patient'
+        userId,
+        pageTitle: 'New Patient'
     })
-  })
+})
 
-  // show a specific patient
+// show a specific patient
 
 router.get('/:patientId', (request, response) => {
     const userId = request.params.userId

@@ -46,14 +46,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // registering controllers
-
+app.use('/users', usersController);
 app.use('/', index);
 
 //patientsController
 const patientsController = require('./routes/patientsController')
 app.use('/users/:userId/patients', patientsController)
-
-app.use('/users', usersController);
 
 //tasksController
 
