@@ -1,11 +1,11 @@
 <div class="nurse infobar">
     <h1>
-        {{user.name}}'s Patients:
+        {{user.name}}
     </h1>
     <h4>
-        phone: {{user.phoneNumber}}
+        p: {{user.phoneNumber}}
     </h4>
-    {{user.floor}}
+        floor: {{user.floor}}
 </div>
 <div>
     <div class="button primary">
@@ -32,4 +32,17 @@
         </a>
     </div>
     {{/each}}
+     <div class="patientBed">
+        <a href="/users/{{../user._id}}/patients/{{this._id}}">
+            <div class="bedTop">
+                <div class="pillow">
+                </div>
+            </div>
+            <div class="sheet">
+            </div>
+            <div class="roomNumber">
+                <h6>+</h6>
+            </div>
+        </a>
+    </div>
 </div>
