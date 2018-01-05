@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+h3 {
+  color: rgb(98, 139, 181);
+}
+
 /* logo */
 .logo {
   height: 42px;
@@ -69,18 +73,44 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  margin: 50px 0px 0px 0px;
+}
+.nursesContainer {
+  margin: 75px 0px 0px 0px;
 }
 
 .nurseIcon {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: hidden;
+  overflow-x: hidden;
   border: 2px solid #E3E1D6;
-  width: 250px;
-  height: 250px;
+  width: 270px;
+  height: 270px;
   border-radius: 50%;
   margin: 10px 0px 10px 0px;
+}
+
+.logoRedNurseCenter {
+  background: #E3E1D6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow-y: visible;
+  height: 90px;
+  width: 90px;
+}
+
+.logoWhiteNurse {
+  background: rgb(98, 139, 181);
+  height: 90px;
+  width: 90px;
+}
+
+.logoRedNurse {
+  background: #E3E1D6;
+  height: 90px;
+  width: 90px;
 }
 
 .patientBed {
@@ -106,6 +136,7 @@ a {
   width: 85px;
   height: 50px;
   background-color: #E3E1D6;
+  border-radius: 5px;
 }
 
 .sheet {
