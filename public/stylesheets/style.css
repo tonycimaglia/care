@@ -21,6 +21,16 @@ h3 {
   color: rgb(98, 139, 181);
 }
 
+.deleteButton, .editButton {
+  border: 1px solid #E3E1D6;
+}
+
+.editButtonContent, .deleteButtonContent {
+  color: rgb(98, 139, 181);
+  background-color: #E3E1D6;
+}
+
+
 /* logo */
 .logo {
   height: 36px;
@@ -150,11 +160,13 @@ h3 {
 .roomNumber {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   height: 300px;
 }
 
 h6 {
-  font-size: 50px;
-  height: 300px;
+  font-size: 100px;
+  margin: 0px;
+  color: #E3E1D6;
 }
 

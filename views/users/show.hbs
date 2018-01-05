@@ -8,13 +8,13 @@
         floor: {{user.floor}}
 </div>
 <div>
-    <div class="button primary">
-        <a href="/users/{{user._id}}/edit">Update Nurse Info</a>
+    <div class="editButton">
+        <a href="/users/{{user._id}}/edit" class="editButtonContent">Update Nurse Info</a>
     </div>
-    <div class="button warning">
-        <a href="/users/{{user._id}}/delete">Delete This Nurse</a>
+    <div class="deleteButton">
+        <a href="/users/{{user._id}}/delete" class="deleteButtonContent">Delete This Nurse</a>
     </div>
-    <H3>Patients:</H3>
+    <H6>Patients:</H6>
 </div>
 <div class="bedscontainer">
     {{#each user.patients}}
