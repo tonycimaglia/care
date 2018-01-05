@@ -23,25 +23,26 @@ h3 {
 
 /* logo */
 .logo {
-  height: 42px;
-  width: 42px;
+  height: 36px;
+  width: 36px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   border: 1px solid rgb(98, 139, 181);
-  padding: 2px
+  padding: 2px;
+  margin: 0 5px 0 5px;
 }
 
 .logoWhite {
   background: #E3E1D6;
-  height: 14px;
-  width: 14px;
+  height: 12px;
+  width: 12px;
 }
 
 .logoRed {
   background: rgb(98, 139, 181);
-  height: 14px;
-  width: 14px;
+  height: 12px;
+  width: 12px;
 }
 
 .app-name {
