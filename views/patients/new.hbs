@@ -1,1 +1,20 @@
-I'm the new Patient Page
+<div class="formPages">
+
+    <h1>User Info</h1>
+    <div>
+        <form action="/users/{{userId}}/patients" method="POST">
+            <div class="form-input">
+                <label for="roomNumber">Room Number</label>
+                <input type="text" name="roomNumber" required/>
+            </div>
+            <div class="form-input">
+                <label for="miscInfo">Miscellaneous Info</label>
+                <input type="text" name="miscInfo" required/>
+            </div>
+            <div>
+                <input class="button primary" type="submit" value="Create Patient">
+                <a href="/users/{{userId}}/patients">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -48,11 +48,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 // registering controllers
 
 app.use('/', index);
-app.use('/users', usersController);
 
 //patientsController
 const patientsController = require('./routes/patientsController')
 app.use('/users/:userId/patients', patientsController)
+
+app.use('/users', usersController);
+
 //tasksController
 
 // catch 404 and forward to error handler
