@@ -19,7 +19,7 @@
 <div class="bedscontainer">
     {{#each user.patients}}
     <div class="patientBed">
-        <a href="/users/{{../user._id}}/patients/{{this._id}}">
+        <a href="/users/{{../user._id}}/patients/{{_id}}">
             <div class="bedTop">
                 <div class="pillow">
                 </div>
@@ -32,8 +32,10 @@
         </a>
     </div>
     {{/each}}
+
+    
      <div class="patientBed">
-        <a href="/users/{{../user._id}}/patients/{{this._id}}">
+        <a href="/users/{{user._id}}/patients/new">
             <div class="bedTop">
                 <div class="pillow">
                 </div>
