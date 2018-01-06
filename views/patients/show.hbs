@@ -1,12 +1,14 @@
-<div>
-  <h1>{{patient.roomNumber}}</h1>
-  <h3>{{patient.miscInfo}}</h3>
-</div>
-<div class="deleteButton">
-  <a href="/users/{{userId}}/patients/{{patient._id}}/delete" class="deleteButtonContent">Discharge This Patient</a>
-</div>
-<div class="editButton">
-  <a href="/users/{{userId}}/patients/{{patient._id}}/edit" class="editButtonContent">Update Patient Info</a>
+<div class="patientInfoContainer">
+  <div>
+    <h2>Room # {{patient.roomNumber}}</h2>
+    <h2>Misc: {{patient.miscInfo}}</h2>
+  </div>
+  <div class="deleteButton">
+    <a href="/users/{{userId}}/patients/{{patient._id}}/delete" class="deleteButtonContent">Discharge This Patient</a>
+  </div>
+  <div class="editButton">
+    <a href="/users/{{userId}}/patients/{{patient._id}}/edit" class="editButtonContent">Update Patient Info</a>
+  </div>
 </div>
 <div class="tasks">
   {{#each patient.tasks}}
