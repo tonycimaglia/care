@@ -33,23 +33,44 @@ router.get('/:patientId', (request, response) => {
         })
 })
 
-// router.post('/', (request, response) => {
-//     const userId = request.params.userId
-//     const newPatient = request.body
+// create a new patient
 
-//     User.findById(userId)
-//         .then((user) => {
-//             user.patients.push(newPatient)
-//             return user.save()
-//         })
-//         .then(() => {
-//             response.redirect(`/users/${userId}/patients`)
-//         })
-//         .catch((error) => {
-//             console.log(error)
-//         })
+router.post('/', (request, response) => {
+    const userId = request.params.userId
+    const newPatient = request.body
 
-// })
+    User.findById(userId)
+        .then((user) => {
+            user.patients.push(newPatient)
+            return user.save()
+        })
+        .then(() => {
+            response.redirect(`/users/${userId}`)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+
+})
+
+// delete a patient
+
+router.get('/:patientId/delete', (request, response) => {
+    const userId = request.params.userId
+    const patientId = request.params.patientId
+  
+    User.findById(userId)
+      .then((user) => {
+        user.patients.id(patientId).remove()
+        return user.save()
+      })
+      .then(() => {
+        response.redirect(`/users/${userId}`)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  })
 
 module.exports = router
 

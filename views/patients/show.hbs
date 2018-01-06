@@ -2,7 +2,9 @@
     <h1>{{patient.roomNumber}}</h1>
     <h3>{{patient.miscInfo}}</h3>
 </div>
-
+    <div class="deleteButton">
+        <a href="/users/{{userId}}/patients/{{patient._id}}/delete" class="deleteButtonContent">Discharge This Patient</a>
+    </div>
   <div class="tasks">
     {{#each patient.tasks}}
       <div class="task">
