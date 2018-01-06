@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router({ mergeParams: true });
 const User = require('../db/models/User')
-
+const Patient = require('../db/models/Patient')
 
 // new patient route
 
@@ -19,6 +19,7 @@ router.get('/new', (request, response) => {
 router.get('/:patientId/edit', (request, response) => {
     const userId = request.params.userId
     const patientId = request.params.patientId
+
     User.findById(userId)
         .then((user) => {
             const patient = user.patients.id(patientId)
@@ -78,17 +79,31 @@ router.post('/', (request, response) => {
 router.get('/:patientId/delete', (request, response) => {
     const userId = request.params.userId
     const patientId = request.params.patientId
-  
+
     User.findById(userId)
-      .then((user) => {
-        user.patients.id(patientId).remove()
-        return user.save()
-      })
+        .then((user) => {
+            user.patients.id(patientId).remove()
+            return user.save()
+        })
+        .then(() => {
+            response.redirect(`/users/${userId}`)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
+
+// take edit page and update existing info
+
+router.put('/:patientId', (request, response) => {
+    const userId = request.params.userId
+    const updatedPatientInfo = request.body
+    const patientId = request.params.patientId
+    console.log(updatedPatientInfo)
+
+    Patient.findByIdAndUpdate(patientId, updatedPatientInfo, {new: true})
       .then(() => {
         response.redirect(`/users/${userId}`)
-      })
-      .catch((error) => {
-        console.log(error)
       })
   })
 
