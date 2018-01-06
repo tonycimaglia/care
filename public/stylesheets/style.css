@@ -19,6 +19,9 @@ a {
 
 h3 {
   color: rgb(98, 139, 181);
+  font-size: 40px;
+  position: absolute;
+  margin: 0;
 }
 
 .deleteButton, .editButton {

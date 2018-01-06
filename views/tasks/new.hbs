@@ -2,13 +2,13 @@
 
     <h1>Patient Info</h1>
     <div>
-        <form action="/users/{{userId}}/patients/{{patientId}}" method="POST">
+        <form action="/users/{{userId}}/patients/{{patient._id}}/tasks" method="POST">
             <div class="form-input">
                 <label for="task">Task:</label>
-                <input type="text" name="task" required/>
+                <input type="text" name="description" required/>
             </div>
             <div>
-                <input class="button primary" type="submit" value="Add TAsk">
+                <input class="button primary" type="submit" value="Add Task">
                 <a href="/users/{{userId}}/patients/{{patient._id}}">Cancel</a>
             </div>
         </form>
