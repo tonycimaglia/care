@@ -101,11 +101,17 @@ router.put('/:patientId', (request, response) => {
     const patientId = request.params.patientId
     console.log(updatedPatientInfo)
 
-    Patient.findByIdAndUpdate(patientId, updatedPatientInfo, {new: true})
-      .then(() => {
-        response.redirect(`/users/${userId}`)
-      })
-  })
+    User.findById(userId)
+        .then((user) => {
+            const originalPatientInfo = user.patients.id(patientId)
+            originalPatientInfo.roomNumber = updatedPatientInfo.roomNumber
+            originalPatientInfo.miscInfo = updatedPatientInfo.miscInfo
+            return user.save()
+        })
+        .then(() => {
+            response.redirect(`/users/${userId}`)
+        })
+})
 
 module.exports = router
 
