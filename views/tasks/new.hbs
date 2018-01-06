@@ -1,0 +1,16 @@
+<div class="formPages">
+
+    <h1>Patient Info</h1>
+    <div>
+        <form action="/users/{{userId}}/patients/{{patientId}}" method="POST">
+            <div class="form-input">
+                <label for="task">Task:</label>
+                <input type="text" name="task" required/>
+            </div>
+            <div>
+                <input class="button primary" type="submit" value="Add TAsk">
+                <a href="/users/{{userId}}/patients/{{patient._id}}">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
