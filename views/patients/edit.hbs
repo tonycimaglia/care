@@ -2,14 +2,14 @@
 
     <h1>Patient Info</h1>
     <div>
-        <form action="/users/{{user._id}}/patients/{{_id}}?_method=PUT" method="POST">
+        <form action="/users/{{user._id}}/patients/{{patient._id}}?_method=PUT" method="POST">
             <div class="form-input">
                 <label for="roomNumber">Room Number</label>
-                <input type="text" name="roomNumber" required/>
+                <input type="text" name="roomNumber" value="{{patient.roomNumber}}" required/>
             </div>
             <div class="form-input">
                 <label for="miscInfo">Miscellaneous Info</label>
-                <input type="text" name="miscInfo" required/>
+                <input type="text" name="miscInfo" value="{{patient.miscInfo}}" required/>
             </div>
             <div>
                 <input class="button primary" type="submit" value="Create Patient">
