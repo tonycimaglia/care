@@ -14,6 +14,26 @@ router.get('/new', (request, response) => {
     })
 })
 
+// edit a specific patient
+
+router.get('/:patientId/edit', (request, response) => {
+    const userId = request.params.userId
+    const patientId = request.params.patientId
+    User.findById(userId)
+        .then((user) => {
+            const patient = user.patients.id(patientId)
+            response.render('patients/edit', {
+                userId,
+                patient,
+                pageTitle: 'Patient'
+            })
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
+
+
 // show a specific patient
 
 router.get('/:patientId', (request, response) => {

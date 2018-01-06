@@ -1,0 +1,20 @@
+<div class="formPages">
+
+    <h1>Patient Info</h1>
+    <div>
+        <form action="/users/{{user._id}}/patients/{{_id}}?_method=PUT" method="POST">
+            <div class="form-input">
+                <label for="roomNumber">Room Number</label>
+                <input type="text" name="roomNumber" required/>
+            </div>
+            <div class="form-input">
+                <label for="miscInfo">Miscellaneous Info</label>
+                <input type="text" name="miscInfo" required/>
+            </div>
+            <div>
+                <input class="button primary" type="submit" value="Create Patient">
+                <a href="/users/{{userId}}">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
