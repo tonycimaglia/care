@@ -5,7 +5,7 @@ html, body {
 body {
   padding: 0px;
   margin: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #E3E1D6;
   display: flex;
   flex-direction: column;
@@ -23,16 +23,6 @@ h3 {
   position: absolute;
   margin: 0;
 }
-
-.deleteButton, .editButton {
-  border: 1px solid #E3E1D6;
-}
-
-.editButtonContent, .deleteButtonContent {
-  color: rgb(98, 139, 181);
-  background-color: #E3E1D6;
-}
-
 
 /* logo */
 .logo {
@@ -71,9 +61,7 @@ h3 {
   align-items: center;
   height: 50px;
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
+
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
@@ -89,6 +77,18 @@ h3 {
   width: 80vw;
   border: 1px solid rgba(0, 0, 0, 0.25);
 }
+
+.patientInfoContainer {
+  margin: 100px;
+  display: flex;
+  background-color: #E3E1D6;
+  color: rgb(98, 139, 181);
+}
+
+h2 {
+  color: rgb(98, 139, 181);
+}
+
 /*Bed design*/
 .bedscontainer, .nursesContainer {
   width: 100%;
@@ -186,15 +186,6 @@ h6 {
   color: #E3E1D6;
 }
 
-.patientInfoContainer {
-  margin: 100px;
-  display: flex;
-}
-
-h2 {
-  color: #E3E1D6;
-}
-
 .patientBed:hover > * {
   background-color:rgba(0, 0, 0, 0.05);
   border-radius: 25px;
@@ -232,6 +223,11 @@ input[type=text], input[type=Number]{
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  border-radius: 5px;
+  background-color:  #E3E1D6;
+  color:  rgb(98, 139, 181);
+  outline: none;
+  font-size: 20px
 }
 
 .cancelButton {
@@ -254,4 +250,13 @@ input[type=text], input[type=Number]{
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.deleteButton, .editButton {
+  border: 1px solid #E3E1D6;
+}
+
+.editButtonContent, .deleteButtonContent {
+  color: rgb(98, 139, 181);
+  background-color: #E3E1D6;
 }
