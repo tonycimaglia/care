@@ -16,8 +16,12 @@
     {{this.description}}
     </a>
   </div>
+        <div class="deleteButton">
+        <a href="/users/{{_id}}/patients/{{_id}}/tasks/{{_id}}/delete" class="deleteButtonContent">Complete</a>
+    </div>
   {{/each}}
 </div>
+
 <div class="addButton">
   <a href="/users/{{userId}}/patients/{{patient._id}}/tasks/new" class="addButtonContent">Add Task</a>
 </div>

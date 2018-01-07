@@ -1,14 +1,16 @@
 const express = require('express');
-var router = express.Router({ mergeParams: true });
+const router = express.Router({ mergeParams: true })
 const User = require('../db/models/User')
+
 
 
 router.get('/new', (request, response) => {
     const userId = request.params.userId
     const patientId = request.params.patientId
-    
+
     User.findById(userId)
         .then((user) => {
+            console.log("this is the" + user + "for the new route")
             const patient = user.patients.id(patientId)
 
             response.render('tasks/new', {
@@ -26,13 +28,34 @@ router.post('/', (request, response) => {
 
     User.findById(userId)
         .then((user) => {
+            console.log("this is the user" + user)
             const patient = user.patients.id(patientId)
             patient.tasks.push(newTask)
-            console.log(patient.tasks)
             return user.save()
         })
         .then(() => {
             response.redirect(`/users/${userId}/patients/${patientId}`)
+        })
+})
+
+router.get('/:taskId/delete', (request, response) => {
+    const userId = request.params.userId
+    const patientId = request.params.patientId
+    const taskId = request.params.taskId
+    console.log("this is the Id " + userId)
+    User.findById(userId)
+        .then((user) => {
+            console.log("this is the user " + user)
+            const patient = user.patients.id(patientId)
+            patient.tasks.id(taskId).remove()
+
+            return user.save()
+        })
+        .then(() => {
+            response.redirect(`/users/${userId}/patients/${patientId}`)
+        })
+        .catch((error) => {
+            console.log(error)
         })
 })
 
