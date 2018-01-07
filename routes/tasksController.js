@@ -43,12 +43,11 @@ router.get('/:taskId/delete', (request, response) => {
     const userId = request.params.userId
     const patientId = request.params.patientId
     const taskId = request.params.taskId
-
+    console.log(request.params);
     User.findById(userId)
         .then((user) => {
             const patient = user.patients.id(patientId)
             patient.tasks.id(taskId).remove()
-
             return user.save()
 
         })

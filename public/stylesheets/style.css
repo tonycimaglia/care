@@ -44,6 +44,7 @@ h3 {
   border: 1px solid rgb(98, 139, 181);
   padding: 2px;
   margin: 0 5px 0 5px;
+  border-radius: 5px;
 }
 
 .logoWhite {
