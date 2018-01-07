@@ -84,6 +84,7 @@ h3 {
   flex-direction: column;
   margin: 70px 0px 0px 0px;
   padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
 }
 /*Bed design*/
 .bedscontainer, .nursesContainer {
@@ -111,6 +112,7 @@ h3 {
   height: 270px;
   border-radius: 50%;
   margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .logoRedNurseCenter {
@@ -143,7 +145,8 @@ h3 {
   height: 400px;
   border-radius: 25px;
   border: 2px solid #E3E1D6;
-  margin: 10px 0px 10px 0px
+  margin: 10px 0px 10px 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .bedTop {
@@ -189,9 +192,11 @@ h2 {
   color: #E3E1D6;
 }
 
-.patientBed:hover, {
+.patientBed:hover > * {
   background-color:rgba(0, 0, 0, 0.05);
+  border-radius: 25px;
 }
+
 
 .logoContainer {
   display: flex;
