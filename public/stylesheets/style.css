@@ -289,6 +289,20 @@ input[type=text], input[type=Number]{
   background-color: rgba(179, 55, 53, 0.947)
 }
 
+a.cancelButton:hover {
+  background-color: rgba(179, 55, 53, 0.947);
+  color: #E3E1D6;
+}
+
+input.button.primary:hover{
+  background-color: rgb(15, 121, 15);
+  color: #E3E1D6;
+}
+
+.addButton {
+  max-width: 170px;
+}
+
 .tasksContainer {
   display: flex;
   flex-direction: column;
