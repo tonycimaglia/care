@@ -277,13 +277,16 @@ input[type=text], input[type=Number]{
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
+  width: 100px;
 }
 
 .tasksContainer {
   display: flex;
   flex-direction: column;
+  width: 70vw;
 }
 
 .task {
   display: flex;
+
 }
