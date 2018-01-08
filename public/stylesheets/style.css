@@ -120,6 +120,9 @@ h2 {
   height: 270px;
   border-radius: 50%;
   margin: 20px;
+}
+
+.nurseIcon:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -288,5 +291,12 @@ input[type=text], input[type=Number]{
 
 .task {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E3E1D6;
+}
 
+.taskDescription {
+  color: rgb(98, 139, 181);
+  margin:  0px 0px 0px 10px;
 }

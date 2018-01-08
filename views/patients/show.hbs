@@ -17,7 +17,6 @@
     {{#each patient.tasks}}
     <div class="taskDescription">
       {{this.description}}
-      </a>
     </div>
     <div class="deleteButton">
       <a href="/users/{{../userId}}/patients/{{../patient._id}}/tasks/{{this._id}}/delete" class="deleteButtonContent">Complete</a>
