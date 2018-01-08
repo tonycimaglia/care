@@ -1,9 +1,9 @@
 <div class="patientInfoContainer">
   <div>
-  <h2>Room # {{patient.roomNumber}}</h2>
+    <h2>Room # {{patient.roomNumber}}</h2>
   </div>
   <div>
-  <h2>Misc: {{patient.miscInfo}}</h2>
+    <h2>Misc: {{patient.miscInfo}}</h2>
   </div>
   <div class="deleteButton">
     <a href="/users/{{userId}}/patients/{{patient._id}}/delete" class="deleteButtonContent">Discharge This Patient</a>
@@ -12,18 +12,19 @@
     <a href="/users/{{userId}}/patients/{{patient._id}}/edit" class="editButtonContent">Update Patient Info</a>
   </div>
 </div>
-<div class="tasks">
-  {{#each patient.tasks}}
+<div class="tasksContainer">
   <div class="task">
-    {{this.description}}
-    </a>
-  </div>
-  <div class="deleteButton">
-    <a href="/users/{{../userId}}/patients/{{../patient._id}}/tasks/{{this._id}}/delete" class="deleteButtonContent">Complete</a>
+    {{#each patient.tasks}}
+    <div class="taskDescription">
+      {{this.description}}
+      </a>
+    </div>
+    <div class="deleteButton">
+      <a href="/users/{{../userId}}/patients/{{../patient._id}}/tasks/{{this._id}}/delete" class="deleteButtonContent">Complete</a>
+    </div>
   </div>
   {{/each}}
-</div>
-
-<div class="addButton">
-  <a href="/users/{{userId}}/patients/{{patient._id}}/tasks/new" class="addButtonContent">Add Task</a>
+  <div class="addButton">
+    <a href="/users/{{userId}}/patients/{{patient._id}}/tasks/new" class="addButtonContent">Add Task</a>
+  </div>
 </div>

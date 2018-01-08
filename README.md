@@ -2,7 +2,7 @@
 
 ## App Overview:
 
-Care is a tool for nurses that enables them to keep track of their off the cuff tasks that arise throughout the day. 
+Care is a tool for nurses that enables them to organize and keep track of off the cuff, patient-specific tasks that arise throughout the day. 
 
 ##### Heroku Link:
 
@@ -23,9 +23,13 @@ https://trello.com/b/XZ2l22Hq/care
 
 ### Tech Used:
 
-##### Languages: HTML, CSS, JavaScript
+##### Languages: 
 
-##### Tools: Node.js, Express.js, MogoDB.js
+HTML, CSS, JavaScript
+
+##### Tools: 
+
+Node.js, Express.js, MogoDB.js
 
 ## Approach:
 

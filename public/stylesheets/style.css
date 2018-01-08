@@ -278,3 +278,12 @@ input[type=text], input[type=Number]{
   cursor: pointer;
   border-radius: 5px;
 }
+
+.tasksContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.task {
+  display: flex;
+}
