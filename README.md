@@ -4,28 +4,28 @@
 
 Care is a tool for nurses that enables them to keep track of their off the cuff tasks that arise throughout the day. 
 
-### Heroku Link:
+##### Heroku Link:
 
 https://care-project-2.herokuapp.com/
 
-### WIREFRAMES:
+##### WIREFRAMES:
 
 https://imgur.com/Xzgv4hN
 
-### ERD:
+##### ERD:
 
 https://imgur.com/nyePtbT
 
-### User Stories:
+##### User Stories:
 
 https://trello.com/b/XZ2l22Hq/care
 
 
 ### Tech Used:
 
-### Languages: HTML, CSS, JavaScript
+##### Languages: HTML, CSS, JavaScript
 
-### Tools: Node.js, Express.js, MogoDB.js
+##### Tools: Node.js, Express.js, MogoDB.js
 
 ## Approach:
 
