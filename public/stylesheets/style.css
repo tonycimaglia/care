@@ -246,10 +246,10 @@ input[type=text], input[type=Number]{
   color: rgb(98, 139, 181);
   padding: 12px 32px;
   text-decoration: none;
-  margin: 4px 0 0 0;
   cursor: pointer;
   border-radius: 5px;
 }
+
 
 .deleteButton, .editButton {
   border: none;
@@ -266,9 +266,12 @@ input[type=text], input[type=Number]{
   border: 1px solid #E3E1D6;
 }
 
+.deleteButton:hover {
+  background-color: #B33735;
+}
+
 .editButtonContent, .deleteButtonContent {
   color: #E3E1D6;
-  background-color: rgb(98, 139, 181);
 }
 
 .addButton {
@@ -299,4 +302,11 @@ input[type=text], input[type=Number]{
 .taskDescription {
   color: rgb(98, 139, 181);
   margin:  0px 0px 0px 10px;
+}
+
+.createCanelContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0px 0px 0px;
 }
