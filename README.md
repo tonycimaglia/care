@@ -4,7 +4,7 @@
 
 Care is a tool for nurses that enables them to organize and keep track of off the cuff, patient-specific tasks that arise throughout the day. 
 
-##### Heroku Link:
+##### App Link:
 
 https://care-project-2.herokuapp.com/
 
@@ -21,7 +21,7 @@ https://imgur.com/nyePtbT
 https://trello.com/b/XZ2l22Hq/care
 
 
-### Tech Used:
+### Technologies Used:
 
 ##### Languages: 
 
@@ -29,7 +29,7 @@ HTML, CSS, JavaScript
 
 ##### Tools: 
 
-Node.js, Express.js, MogoDB.js
+Node.js, Express.js, MongoDB.js
 
 ## Approach:
 
@@ -47,7 +47,7 @@ In version two:
 
 * User's will be able to add timers to their tasks if they need to be completed in a certain amount of time.
 
-* I'd like to have a page that displays every single one of a nurses currently active tasks rather than only be able to display them in a patient-specific way. 
+* I'd like to have a page that displays every single one of a nurses currently active tasks rather than only be able to display them in a patient-specific way. This way, managers could view what needs to be done for all the nurses on a given floor. 
 
 
 
