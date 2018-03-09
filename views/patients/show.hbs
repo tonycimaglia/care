@@ -13,8 +13,8 @@
   </div>
 </div>
 <div class="tasksContainer">
+  {{#each patient.tasks}}
   <div class="task">
-    {{#each patient.tasks}}
     <div class="taskDescription">
       {{this.description}}
     </div>
@@ -23,6 +23,7 @@
     </div>
   </div>
   {{/each}}
+
   <div class="addButton">
     <a href="/users/{{userId}}/patients/{{patient._id}}/tasks/new" class="addButtonContent">Add Task</a>
   </div>

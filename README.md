@@ -27,6 +27,10 @@ https://trello.com/b/XZ2l22Hq/care
 
 HTML, CSS, JavaScript
 
+##### Libraries: 
+
+Handlebars
+
 ##### Tools: 
 
 Node.js, Express.js, MongoDB.js
