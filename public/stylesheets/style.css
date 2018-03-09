@@ -251,14 +251,18 @@ input[type=text], input[type=Number]{
 
 
 .deleteButton, .editButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   border: none;
   color: #E3E1D6;
   background-color: rgb(98, 139, 181);
-  padding: 16px 32px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
+  width: 200px;
+  height: 55px;
 }
 
 .deleteButton, .editButton {
@@ -267,6 +271,25 @@ input[type=text], input[type=Number]{
 
 .editButtonContent, .deleteButtonContent {
   color: #E3E1D6;
+}
+
+.deleteTask {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: none;
+  color: #E3E1D6;
+  background-color: rgb(98, 139, 181);
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100px;
+  height: 55px;
+}
+
+.deleteTask:hover {
+  background-color: rgba(179, 55, 53, 0.947)
 }
 
 .addButton {
