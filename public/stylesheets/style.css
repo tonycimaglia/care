@@ -293,15 +293,32 @@ input[type=text], input[type=Number]{
 }
 
 .addButton {
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   color: rgb(98, 139, 181); 
   background-color: #E3E1D6;
-  padding: 16px 32px;
+  border: 2px solid #E3E1D6;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
-  width: 100px;
+  width: 150px;
+  height: 55px;
+}
+
+.addButton:hover {
+  color: #E3E1D6;
+  background-color:   rgb(98, 139, 181);
+}
+
+.addButtonContent {
+  color: rgb(98, 139, 181); 
+  padding: 15px;
+}
+
+.addButtonContent:hover {
+  color: #E3E1D6; 
 }
 
 .editButton:hover {
@@ -329,6 +346,8 @@ input.button.primary:hover{
 .tasksContainer {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   width: 70vw;
 }
 
@@ -337,6 +356,8 @@ input.button.primary:hover{
   justify-content: space-between;
   align-items: center;
   background-color: #E3E1D6;
+  width: 70vw;
+  margin: 10px;
 }
 
 .taskDescription {
